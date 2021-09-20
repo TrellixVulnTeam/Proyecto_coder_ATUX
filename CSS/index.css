@@ -78,6 +78,7 @@ a:link {
   margin-top: 10rem; }
 
 .cartelera {
+  padding: 5px;
   width: 50%;
   height: 120%; }
 
@@ -98,7 +99,7 @@ fieldset {
   color: black;
   background-color: #EBE7E7;
   height: auto;
-  width: 50%;
+  width: 80%;
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 10px; }
@@ -170,8 +171,15 @@ ul.listas li {
 
 #catalogo {
   display: grid;
-  grid-template-columns: repeat(3, 3fr);
+  
+  grid-template-columns: repeat(5, 4fr);
   grid-template-rows: repeat(3, auto); }
+
+#catalogo_generos {
+  display: grid;
+  
+  grid-template-columns: repeat(5, 4fr);
+  }
 
 #cuerpo_catalogo {
   display: grid;
@@ -182,6 +190,7 @@ ul.listas li {
   grid-template-areas: "generos main"; }
 
 .filtrador {
+  
   grid-area: generos;
   margin-left: 10px; }
 
@@ -194,7 +203,11 @@ ul.listas li {
 
 .caja_principal {
   display: grid;
-  grid-template-areas: "cabeza" "navegador"  "peli_carrusel"  "new"  "pie_principal"; }
+  grid-template-areas: "cabeza"
+ "navegador" 
+ "peli_carrusel" 
+ "new" 
+ "pie_principal"; }
 
 #cabeza {
   grid-area: cabeza; }
@@ -214,7 +227,11 @@ ul.listas li {
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .caja_principal {
     display: grid;
-    grid-template-areas: "cabeza" "navegador"  "peli_carrusel"  "new"  "pie_principal";
+    grid-template-areas: "cabeza"
+ "navegador" 
+ "peli_carrusel" 
+ "new" 
+ "pie_principal";
     grid-template-rows: repeat(5, auto); }
   #cuerpo_catalogo {
     display: grid;
@@ -262,7 +279,11 @@ ul.listas li {
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   .caja_principal {
     display: grid;
-    grid-template-areas: "cabeza" "navegador"  "peli_carrusel"  "new"  "pie_principal";
+    grid-template-areas: "cabeza"
+ "navegador" 
+ "peli_carrusel" 
+ "new" 
+ "pie_principal";
     grid-template-rows: repeat(5, auto); }
   #catalogo {
     display: grid;
