@@ -171,7 +171,7 @@ ul.listas li {
 
 #catalogo {
   display: grid;
-  
+  grid-area: main;
   grid-template-columns: repeat(5, 4fr);
   grid-template-rows: repeat(3, auto); }
 
@@ -194,7 +194,7 @@ ul.listas li {
   grid-area: generos;
   margin-left: 10px; }
 
-.peliculas {
+#orden_centro {
   grid-area: main; }
 
 .filtrador_2 {
@@ -224,6 +224,13 @@ ul.listas li {
 #pie {
   grid-area: pie_principal; }
 
+#centrado {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   
   
@@ -237,11 +244,12 @@ ul.listas li {
     grid-template-rows: repeat(5, auto); }
   #cuerpo_catalogo {
     display: grid;
-    grid-template-areas: "generos" "main"; }
+    grid-template-areas: "generos main" "plataforma main"; }
   #catalogo {
+    grid-area: main;
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    grid-template-rows: repeat(5, auto); }
+    grid-template-columns: repeat(4, 2fr);
+   }
   fieldset {
     width: auto; }
   #cabeza {
@@ -262,10 +270,8 @@ ul.listas li {
     background-color: #8E0303;
     color: #EBE7E7; }
   #carrusel {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
     margin-left: 5%;
     margin-right: 5%; }
   #media_carrusel {
@@ -285,9 +291,16 @@ ul.listas li {
 
       #catalogo_generos {
         display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    
+        }
+      
         
-        grid-template-columns: repeat(2, 1fr);
-        }   
+   
+
+    h2 {
+      text-align: center;
+    }
   }
 
 @media only screen and (min-width: 320px) and (max-width: 768px) {
@@ -348,10 +361,22 @@ ul.listas li {
 
     #catalogo_generos {
       display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
       
     } 
 
+    #orden_centro {
+      display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    }
+    
+
+    h2 {
+      text-align: center;
+    }
     
   }
